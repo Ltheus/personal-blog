@@ -1,4 +1,12 @@
-import { Button, Card, Container, Typography } from "@material-ui/core";
+import {
+  Button,
+  Card,
+  CardContent,
+  CardHeader,
+  CardMedia,
+  Container,
+  Typography,
+} from "@material-ui/core";
 import { useState } from "react";
 import { FETCH_POKEMON_DATA } from "./PokeAPIFunctions";
 
@@ -22,23 +30,44 @@ export const PokeAPICard = () => {
   };
 
   return (
-    <Card>
-      <Button variant="outlined" onClick={getPokemon}>
-        <Typography>Search random Pokémon</Typography>
-      </Button>
+    <Card style={{ border: "solid 1px rgb(0, 0, 0, 0.45)", maxWidth: "40%" }}>
+      <CardHeader
+        title="Random Pokémon Generator"
+        subheader="Comes with sprites, types and Pokedex entries!"
+        action={
+          <Button
+            variant="outlined"
+            onClick={getPokemon}
+            style={{ marginTop: "1rem" }}
+          >
+            <Typography>Search random Pokémon</Typography>
+          </Button>
+        }
+        style={{
+          borderBottom: "solid 1px black",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "start",
+        }}
+      />
+
       {pokeID !== 0 && (
-        <Card>
-          <Typography variant="body1">
-            You got #{pokeID}: {pokeName} !
-          </Typography>
-          <img src={pokeSprite} alt={`${pokeName}'s sprite.`} />
-          <Typography>
-            {pokeName} is a <span> {pokeTypes} </span> type Pokémon.
-          </Typography>
-          <Typography variant="body2">
-            <span>{pokeName}'s most recent Pokedex entry:</span> {pokedex}
-          </Typography>
-        </Card>
+        <Container>
+          <CardContent>
+            <Typography variant="body1">
+              You got #{pokeID}: {pokeName} !
+            </Typography>
+            <Typography>
+              {pokeName} is a <span> {pokeTypes} </span> type Pokémon.
+            </Typography>
+            <Container style={{margin: "1rem"}}>
+              <img src={pokeSprite} alt={`${pokeName}'s sprite.`} />
+            </Container>
+            <Typography variant="body2">
+              <span>{pokeName}'s most recent Pokedex entry:</span> {pokedex}
+            </Typography>
+          </CardContent>
+        </Container>
       )}
     </Card>
   );
