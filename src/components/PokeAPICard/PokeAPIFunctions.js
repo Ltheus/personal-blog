@@ -7,7 +7,7 @@ const FILTER_FORMAT_FLAVOR_TEXT = (pokeInfo, setPokedex) => {
 
   const numberOfTexts = filteredFlavorTexts.length;
   const flavorTextEntry =
-    numberOfTexts > 0 ? filteredFlavorTexts[numberOfTexts - 1] : {};
+    numberOfTexts > 0 ? filteredFlavorTexts[numberOfTexts - 1] : "";
 
   const rawText = flavorTextEntry.flavor_text;
 
@@ -21,14 +21,9 @@ const FILTER_FORMAT_FLAVOR_TEXT = (pokeInfo, setPokedex) => {
   setPokedex(formatedText);
 };
 
-const FETCH_POKEMON_SPRITE = (pokeID, setPokeSprite) => {
+const FETCH_POKEMON_SPRITE_AND_TYPE = (pokeID, setPokeSprite, setPokeTypes) => {
   axios.get(`https://pokeapi.co/api/v2/pokemon/${pokeID}`).then((res) => {
     setPokeSprite(res.data.sprites.front_default);
-  });
-};
-
-const FORMAT_POKEMON_TYPE = (pokeID, setPokeTypes) => {
-  axios.get(`https://pokeapi.co/api/v2/pokemon/${pokeID}`).then((res) => {
     const pokeTypesInfo = res.data.types;
     pokeTypesInfo[1]
       ? setPokeTypes(
@@ -52,9 +47,7 @@ export const FETCH_POKEMON_DATA = (
       const pokeInfo = res.data;
       setPokeName(pokeInfo.name.toUpperCase());
       setPokeID(pokeInfo.id.toString());
-      setPokeTypes(pokeInfo.types);
       FILTER_FORMAT_FLAVOR_TEXT(pokeInfo, setPokedex);
-      FETCH_POKEMON_SPRITE(pokeID, setPokeSprite);
-      FORMAT_POKEMON_TYPE(pokeID, setPokeTypes);
+      FETCH_POKEMON_SPRITE_AND_TYPE(pokeID, setPokeSprite, setPokeTypes);
     });
 };
