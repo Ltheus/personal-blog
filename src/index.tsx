@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import "./index.css";
 import { ThemeProvider, createTheme } from "@material-ui/core";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 const theme = createTheme({
   typography: {
@@ -20,7 +21,19 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <App />
+      <Router>
+        <Switch>
+          <Route path="/">
+            <App />
+          </Route>
+          {/* <Route path="/about-me">
+            <About />
+          </Route>
+          <Route path="/work">
+            <Work />
+          </Route> */}
+        </Switch>
+      </Router>
     </ThemeProvider>
   </React.StrictMode>
 );
