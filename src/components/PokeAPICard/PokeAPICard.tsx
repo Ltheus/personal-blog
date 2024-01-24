@@ -30,7 +30,7 @@ export const PokeAPICard = () => {
   };
 
   return (
-    <Card style={{ border: "solid 1px rgb(0, 0, 0, 0.45)", maxWidth: "40%" }}>
+    <Card style={{ border: "solid 1px rgb(0, 0, 0, 0.45)" }}>
       <CardHeader
         title="Random Pokémon Generator"
         subheader="Comes with sprites, types and Pokedex entries!"
