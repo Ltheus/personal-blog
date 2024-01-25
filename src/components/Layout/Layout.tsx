@@ -46,7 +46,7 @@ export const Layout = ({ children }: any) => {
     {
       text: "mais sobre mim",
       icon: <Person />,
-      path: "/about-me",
+      path: "/about",
     },
     {
       text: "trabalho",
@@ -70,7 +70,7 @@ export const Layout = ({ children }: any) => {
               button
               divider
               key={item.text}
-              onClick={() => history.push(item.path)}
+              onClick={() => {history.push(item.path)}}
             >
               <ListItemIcon>{item.icon}</ListItemIcon>
               <ListItemText primary={item.text} />
