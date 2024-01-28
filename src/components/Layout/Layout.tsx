@@ -1,5 +1,6 @@
 import {
   Avatar,
+  Container,
   Drawer,
   List,
   ListItem,
@@ -13,24 +14,36 @@ import { useHistory } from "react-router-dom";
 import picture from "../../assets/images/avatar_picture.jpg"
 
 const drawerWidth = 240;
-const useStyles = makeStyles({
-  root: {
-    display: "flex",
-  },
-  page: {
-    background: "lightgray",
-    width: `100%`,
-  },
-  drawer: {
-    width: drawerWidth,
-  },
-  drawerPaper: {
-    width: drawerWidth,
-  },
-  avatar: {
-    width: "5rem",
-    height: "5rem"
-  }
+const useStyles = makeStyles((theme) => {
+  return {
+    root: {
+      display: "flex",
+      height: "100%",
+      background: theme.palette.background.default,
+    },
+    page: {
+      width: `100%`,
+    },
+    drawer: {
+      width: drawerWidth,
+    },
+    drawerPaper: {
+      width: drawerWidth,
+    },
+    avatarContainer: {
+      width: drawerWidth,
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      padding: "1rem 0",
+    },
+    avatar: {
+      width: "5rem",
+      height: "5rem",
+      border: "dashed 1px",
+      borderColor: "black",
+    },
+  };
 });
 
 export const Layout = ({ children }: any) => {
@@ -39,17 +52,17 @@ export const Layout = ({ children }: any) => {
 
   const menuItems = [
     {
-      text: "início",
+      text: "Home",
       icon: <Home />,
       path: "/",
     },
     {
-      text: "mais sobre mim",
+      text: "About me",
       icon: <Person />,
       path: "/about",
     },
     {
-      text: "trabalho",
+      text: "Work",
       icon: <Work />,
       path: "/work",
     },
@@ -63,14 +76,18 @@ export const Layout = ({ children }: any) => {
         className={classes.drawer}
         classes={{ paper: classes.drawerPaper }}
       >
-        <Avatar alt="" src={picture} className={classes.avatar}/>
+        <Container className={classes.avatarContainer}>
+          <Avatar alt="" src={picture} className={classes.avatar} />
+        </Container>
         <List>
           {menuItems.map((item) => (
             <ListItem
               button
               divider
               key={item.text}
-              onClick={() => {history.push(item.path)}}
+              onClick={() => {
+                history.push(item.path);
+              }}
             >
               <ListItemIcon>{item.icon}</ListItemIcon>
               <ListItemText primary={item.text} />

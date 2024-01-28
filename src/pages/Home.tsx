@@ -10,7 +10,7 @@ export default function Home() {
           <Typography>Hello World</Typography>
         </Grid>
         <Grid item xs={12} md={6}>
-          <Typography>Hello World</Typography>
+          <Typography variant='h1'>Hello World</Typography>
         </Grid>
         <Grid item xs={12} md={6}>
           <Typography>Hello World</Typography>
