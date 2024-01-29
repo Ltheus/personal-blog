@@ -1,6 +1,4 @@
-import React from 'react'
 import { Grid, Typography } from '@material-ui/core';
-// import { PokeAPICard } from '../components/PokeAPICard/PokeAPICard';
 
 export default function Work() {
   return (

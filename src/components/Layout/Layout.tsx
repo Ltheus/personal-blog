@@ -6,10 +6,9 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
-  Typography,
   makeStyles,
 } from "@material-ui/core";
-import { Home, Person, Work } from "@material-ui/icons";
+import { Person, Work } from "@material-ui/icons";
 import { useHistory } from "react-router-dom";
 import picture from "../../assets/images/avatar_picture.jpg";
 
@@ -25,7 +24,6 @@ const useStyles = makeStyles((theme) => {
     },
     drawer: {
       width: drawerWidth,
-      // boxShadow: `2px 2px 2px ${theme.palette.text.primary}`,
     },
     drawerPaper: {
       width: drawerWidth,
