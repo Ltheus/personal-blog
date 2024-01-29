@@ -1,1 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Judson:700|Judson:400');
+
+ html {
+    /* height: 100%; */
+}
+
+body{
+    /* height: 90%; */
+    padding: .5rem;
+    margin: 0;
+    background-color: #eaba77;
+}
+
+#root{
+    /* height: 90%; */
+}
