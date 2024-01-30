@@ -14,11 +14,8 @@ import { Shuffle } from "@mui/icons-material";
 const useStyles = makeStyles((theme) => {
   return {
     card: {
-      filter: `drop-shadow(2px 2px 3px ${theme.palette.text.primary})`,
       display: "flex",
       flexDirection: "column",
-      height: "100%",
-      maxheight: "100%",
     },
     cardHeader: {
       borderBottom: `solid 1px ${theme.palette.text.primary}`,
@@ -28,16 +25,28 @@ const useStyles = makeStyles((theme) => {
     },
     cardContent: {
       display: "flex",
-      justifyContent: "center",
+      justifyContent: "space-between",
       alignItems: "center",
-      height: "100%",
-      maxheight: "100%",
+      height: "20rem",
+      maxHeight: "20rem",
+      width: "100%",
+      padding: ".5rem 0",
     },
     cardNoContent: {
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      height: "100%",
+      height: "20rem",
+      maxHeight: "20rem",
+    },
+    cardContentContainer: {
+      flexGrow: 1,
+      padding: "0 1rem",
+    },
+    spriteContainer: {
+      padding: 0,
+      display: "flex",
+      justifyContent: "center",
     },
   };
 });
@@ -85,7 +94,7 @@ export const PokeAPICard = () => {
       {pokeID !== 0 ? (
         <Container className={classes.cardContent}>
           <CardContent className={classes.cardContent}>
-            <Container>
+            <Container className={classes.cardContentContainer}>
               <Typography variant="body1">
                 You got #{pokeID}: {pokeName} !
               </Typography>
@@ -96,15 +105,15 @@ export const PokeAPICard = () => {
                 <span>{pokeName}'s most recent Pokedex entry:</span> {pokedex}
               </Typography>
             </Container>
-            <Container style={{ margin: "1rem" }}>
-              <img style={{width: "15rem"}} src={pokeSprite} alt={`${pokeName}'s sprite.`} />
+            <Container className={classes.spriteContainer}>
+              <img style={{width: "12rem"}} src={pokeSprite} alt={`${pokeName}'s sprite.`} />
             </Container>
           </CardContent>
         </Container>
       ) : (
         <Container className={classes.cardNoContent}>
           <Typography variant="body1">
-            You haven't selected any Pokémon yet!
+            You haven't found any Pokémon yet!
           </Typography>
         </Container>
       )}
