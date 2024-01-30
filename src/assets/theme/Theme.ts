@@ -5,13 +5,13 @@ export const GlobalTheme = createTheme({
     fontFamily: "Judson",
     fontWeightRegular: 400,
     fontWeightBold: 700,
-    fontSize: 20,
+    fontSize: 18,
     h1: {
       fontSize: "10rem",
       fontWeight: 700,
-      borderBottom: "solid 1px #1d0d04",
+      borderBottom: "solid 3px #1d0d04",
       marginBottom: "2rem",
-      lineHeight: 1
+      lineHeight: .8
     },
   },
   palette: {
