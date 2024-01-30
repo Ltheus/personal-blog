@@ -1,8 +1,22 @@
-import { Grid, List, ListItem, Typography, makeStyles } from '@material-ui/core';
-import personalPicture from "../assets/images/me_skyone.jpg"
-import akaliPic from "../assets/images/akali2.jpg"
-//* import { Instagram, GitHub, LinkedIn } from '@material-ui/icons';
-import { PokeAPICard } from '../components/PokeAPICard/PokeAPICard';
+import {
+  Card,
+  CardHeader,
+  Collapse,
+  Grid,
+  IconButton,
+  ImageList,
+  ImageListItem,
+  List,
+  ListItem,
+  ListItemText,
+  Typography,
+  makeStyles,
+} from "@material-ui/core";
+import personalPicture from "../assets/images/me_skyone.jpg";
+import dogPic from "../assets/images/me-and-dog.jpg";
+import { PokeAPICard } from "../components/PokeAPICard/PokeAPICard";
+import { useState } from "react";
+import { ArrowCircleDown, ArrowCircleUp } from "@mui/icons-material";
 
 const useStyles = makeStyles((theme) => {
   return {
@@ -13,58 +27,138 @@ const useStyles = makeStyles((theme) => {
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      marginTop: "4rem",
     },
-    personalImage: {
-      width: "100%",
-      flexGrow: 0.5,
-      filter: `drop-shadow(2px 2px 3px ${theme.palette.text.primary})`,
-      borderRadius: "4px"
+    fontHollowEffect: {
+      fontStyle: "italic",
+      WebkitTextStrokeWidth: "2px",
+      WebkitTextStrokeColor: `${theme.palette.text.primary}`,
+      color: `${theme.palette.background.default}`,
     },
-    imageContainer: {
+    cardHeader: {
       display: "flex",
-      gap: "2rem"
+      flexDirection: "column",
+      alignItems: "start",
+      gap: "1rem"
     },
-    image: {
-      width: "50%",
-      filter: `drop-shadow(2px 2px 3px ${theme.palette.text.primary})`,
-      borderRadius: "4px"
-    }
   };
-})
+});
 
 export default function Home() {
-  const classes = useStyles()
+  const classes = useStyles();
+  const [expanded, setExpanded] = useState(false);
+
+  const interests = [
+    {
+      title: "Likes",
+      content: [
+        "Heavy Metal",
+        "Tabletop RPG",
+        "Coding",
+        "Elaborate drinks",
+        "Pokémon (as you could tell)",
+      ],
+    },
+    {
+      title: "Dislikes",
+      content: [
+        "Brazilian Country Music",
+        "Insects",
+        "Mastering TTRPG",
+        "Crowded gym",
+        "Tantrum children",
+      ],
+    },
+    {
+      title: "Hobbies",
+      content: [
+        "Writing fantasy narratives for RPG campaigns",
+        "Walking (mainly with my dog, Akali)",
+        "Playing League of Legends and D&D (and other games)",
+        "Gathering useless knowledge",
+        "Going to the gym",
+      ],
+    },
+    {
+      title: "Favourite Media",
+      content: [
+        "Pokémon Games",
+        "One Piece",
+        "Hades",
+        "LoL lore",
+        "Scott Pilgrim VS. The World",
+      ],
+    },
+  ];
+
+  const handleExpandClick = () => {
+    setExpanded(!expanded);
+  };
+
   return (
     <div className={classes.page}>
       <Grid container spacing={2}>
-        <Grid item xs={12} md={6}>
-          <Typography variant="h1"> About me </Typography>
-          <Typography variant="body1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic saepe
-            magni quibusdam, amet voluptatibus numquam aliquam illo? Minus iure,
-            sapiente ab voluptatum eius impedit ratione perspiciatis quisquam
-            velit dolorum eos consequuntur quae sed tempora, omnis quo totam
-            magnam dicta voluptas quas necessitatibus vitae possimus aliquid.
-            Quod assumenda dolore molestiae officiis.
-          </Typography>
+        <Grid item xs={12} md={6} direction="row">
+          <Grid container spacing={8}>
+            <Grid item xs={12} md={6}>
+              <Typography variant="h1">
+                About <span className={classes.fontHollowEffect}>me</span>
+              </Typography>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Typography variant="body1">
+                I'm Matheus (Theus for short) - he/him - a 19-year-old beginner
+                Web Developer who's always been passionate about technology,
+                arts, crafting, and video games. When I was younger, my dad was
+                a car mechanic, and my older brother was an electronic engineer.
+                With that, I always had the presence of this kind of
+                prefessionals in my life, which is why I chose the job I do.
+              </Typography>
+            </Grid>
+          </Grid>
         </Grid>
         <Grid item xs={12} md={6} className={classes.personalImageContainer}>
-          <img
-            className={classes.personalImage}
-            src={personalPicture}
-            alt="A picture of me"
-          />
+          <ImageList rowHeight={300} cols={12}>
+            <ImageListItem cols={5}>
+              <img src={personalPicture} alt="A picture of me" />
+            </ImageListItem>
+            <ImageListItem cols={7}>
+              <img src={dogPic} alt="A picture of me and my dog" />
+            </ImageListItem>
+          </ImageList>
         </Grid>
-        <Grid item xs={12} md={6} className={classes.imageContainer}>
-          <img className={classes.image} src={akaliPic} alt="Picture of my dog Akali" />
-          <Typography variant="body2">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident,
-            soluta asperiores. Voluptate, illum modi? Architecto excepturi
-            suscipit quas quibusdam officiis, ipsa est delectus repellendus
-            inventore, autem minus magnam dolorum, iure dolore minima! Debitis,
-            hic quis!
-          </Typography>
+        <Grid item xs={12} md={6}>
+          <Card variant="outlined">
+            <CardHeader
+            className={classes.cardHeader}
+              title="Interests"
+              subheader="Likes, Dislikes, Hobbies and Favorite Media"
+              action={
+                <IconButton
+                  color="primary"
+                  onClick={handleExpandClick}
+                >
+                  {!expanded ? <ArrowCircleDown /> : <ArrowCircleUp/>}
+                </IconButton>
+              }
+            />
+              <Collapse in={expanded} timeout="auto" unmountOnExit>
+                {interests.map((thing) => (
+                  <List key={thing.title}>
+                    <ListItem divider>
+                      <ListItemText
+                        primary={thing.title}
+                        primaryTypographyProps={{ variant: "h6" }}
+                      />
+                    </ListItem>
+                    {thing.content.map((item) => (
+                      <ListItem>
+                        <ListItemText>{item}</ListItemText>
+                      </ListItem>
+                    ))}
+                  </List>
+                ))}
+              </Collapse>
+          </Card>
         </Grid>
         <Grid item xs={12} md={6}>
           <PokeAPICard />
