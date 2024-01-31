@@ -18,7 +18,6 @@ const useStyles = makeStyles((theme) => {
       flexDirection: "column",
     },
     cardHeader: {
-      borderBottom: `solid 1px ${theme.palette.text.primary}`,
       display: "flex",
       flexDirection: "column",
       alignItems: "start",
