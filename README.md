@@ -29,11 +29,11 @@ To install the application, follow this simple 3-step guide:
    
    2. Acess the aplication's directory: 
 
-      `cd todo-app`
+      `cd personal-blog`
    
-   3. Installing **NodeJS**'s\* dependencys, using **npm**\*:
+   3. Installing **NodeJS**'s\* dependencys, using **npm**\**:
 
-      `npm install` 
+      `npm install` ***
 
    4. Running the aplication:
 
