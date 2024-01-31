@@ -7,7 +7,7 @@ export const GlobalTheme = createTheme({
     fontWeightBold: 700,
     fontSize: 18,
     h1: {
-      fontSize: "10rem",
+      fontSize: "6rem",
       fontWeight: 700,
       borderBottom: "solid 3px #1d0d04",
       marginBottom: "2rem",
@@ -28,6 +28,6 @@ export const GlobalTheme = createTheme({
       default: "#dbc3a4",
       paper: "#dbc3a4",
     },
-    divider: "#1d0d0448",
+    divider: "#1d0d0470",
   },
 });
