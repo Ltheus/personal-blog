@@ -1,7 +1,7 @@
 ### Personal Blog - Project Documentation
 Developed by Matheus Lopes.
 
-This project is more of a website, a simple Personal Blog, showing information about the developer and the things he does / works with.
+This project is more of a website, a simple Personal Blog, showing information about the developer and the things he does/works with.
 
 ## Technologies used
    - TypeScript;
@@ -27,19 +27,19 @@ To install the application, follow this simple 3-step guide:
 
       `git clone https://github.com/Ltheus/personal-blog.git`
    
-   2. Acess the aplication's directory: 
+   2. Access the application's directory: 
 
       `cd personal-blog`
    
-   3. Installing **NodeJS**'s\* dependencys, using **npm**\**:
+   3. Installing **NodeJS**'s\* dependencies, using **npm**\**:
 
       `npm install` ***
 
-   4. Running the aplication:
+   4. Running the application:
 
       `npm run dev`
 
-3. After running it, click the link that appears on the terminal (E. g.: "http://localhost:5173/").
+3. After running it, click the link that appears on the terminal (E.g.: "http://localhost:3000/").
  
  <sup>\* In case you don't have NodeJS installed, click [here](https://nodejs.org/en/download/current) and install the LTS release.</sup>
  
