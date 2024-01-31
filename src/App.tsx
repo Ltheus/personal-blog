@@ -1,7 +1,7 @@
 import "./App.css";
 import Home from "./pages/Home";
 import { Route, Switch } from "react-router-dom";
-import Work from "./pages/Work";
+import APIPage from "./pages/APIPage";
 
 function App() {
   return (
@@ -9,8 +9,8 @@ function App() {
       <Route exact path="/">
         <Home />
       </Route>
-      <Route path="/work">
-        <Work />
+      <Route path="/api">
+        <APIPage />
       </Route>
     </Switch>
   );
