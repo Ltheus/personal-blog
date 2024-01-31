@@ -37,7 +37,7 @@ To install the application, follow this simple 3-step guide:
 
    4. Running the application:
 
-      `npm run dev`
+      `npm start`
 
 3. After running it, click the link that appears on the terminal (E.g.: "http://localhost:3000/").
  
