@@ -8,10 +8,15 @@ import {
   ListItemText,
   makeStyles,
 } from "@material-ui/core";
-import { Person, Work } from "@material-ui/icons";
+import {
+  Person,
+  Instagram,
+  GitHub,
+  LinkedIn,
+  Settings,
+} from "@material-ui/icons";
 import { useHistory } from "react-router-dom";
 import picture from "../../assets/images/avatar_picture.jpg";
-import { Instagram, GitHub, LinkedIn } from "@material-ui/icons";
 
 const drawerWidth = 240;
 const useStyles = makeStyles((theme) => {
@@ -66,9 +71,9 @@ export const Layout = ({ children }: any) => {
       path: "/",
     },
     {
-      text: "Work",
-      icon: <Work color="primary" />,
-      path: "/work",
+      text: "API",
+      icon: <Settings color="primary"/>,
+      path: "/api",
     },
   ];
 

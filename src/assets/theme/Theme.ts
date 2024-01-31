@@ -2,32 +2,36 @@ import { createTheme } from "@material-ui/core";
 
 export const GlobalTheme = createTheme({
   typography: {
-    fontFamily: "Judson",
+    fontFamily: "Raleway",
     fontWeightRegular: 400,
     fontWeightBold: 700,
     fontSize: 18,
     h1: {
       fontSize: "6rem",
       fontWeight: 700,
-      borderBottom: "solid 3px #1d0d04",
+      borderBottom: "solid 3px #0a010c",
       marginBottom: "2rem",
-      lineHeight: .8
+      lineHeight: 0.9,
+    },
+    body1: {
+      lineHeight: 1,
     },
   },
   palette: {
     primary: {
-      main: "#c66025",
+      main: "#3f084b",
     },
     secondary: {
-      main: "#eaba77",
+      main: "#d97086",
     },
     text: {
-      primary: "#1d0d04",
+      primary: "#0a010c",
+      secondary: "#d94070"
     },
     background: {
-      default: "#dbc3a4",
-      paper: "#dbc3a4",
+      default: "#f4edf9",
+      paper: "#e8cfff",
     },
-    divider: "#1d0d0470",
+    divider: "#0a010c70",
   },
 });
