@@ -27,6 +27,7 @@ const useStyles = makeStyles((theme) => {
   return {
     page: {
       color: theme.palette.text.primary,
+      backgroundColor: theme.palette.background.default,
       margin: "1rem 6rem",
       overflowY: "visible"
     },
