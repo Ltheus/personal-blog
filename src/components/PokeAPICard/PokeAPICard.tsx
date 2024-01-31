@@ -3,12 +3,54 @@ import {
   Card,
   CardContent,
   CardHeader,
-  CardMedia,
   Container,
+  Divider,
   Typography,
+  makeStyles,
 } from "@material-ui/core";
 import { useState } from "react";
 import { FETCH_POKEMON_DATA } from "./PokeAPIFunctions";
+import { Shuffle } from "@mui/icons-material";
+
+const useStyles = makeStyles((theme) => {
+  return {
+    card: {
+      display: "flex",
+      flexDirection: "column",
+      width: "100%",
+    },
+    cardHeader: {
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "start",
+    },
+    cardContent: {
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      height: "20rem",
+      maxHeight: "20rem",
+      width: "100%",
+      padding: ".5rem 0",
+    },
+    cardNoContent: {
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      height: "20rem",
+      maxHeight: "20rem",
+    },
+    cardContentContainer: {
+      flexGrow: 1,
+      padding: "0 1rem",
+    },
+    spriteContainer: {
+      padding: 0,
+      display: "flex",
+      justifyContent: "center",
+    },
+  };
+});
 
 export const PokeAPICard = () => {
   const [pokeName, setPokeName] = useState("");
@@ -16,6 +58,8 @@ export const PokeAPICard = () => {
   const [pokedex, setPokedex] = useState("");
   const [pokeSprite, setPokeSprite] = useState("");
   const [pokeTypes, setPokeTypes] = useState("");
+
+  const classes = useStyles();
 
   const getPokemon = async () => {
     const pokeID = Math.floor(Math.random() * 1009);
@@ -30,43 +74,48 @@ export const PokeAPICard = () => {
   };
 
   return (
-    <Card style={{ border: "solid 1px rgb(0, 0, 0, 0.45)" }}>
+    <Card className={classes.card}>
       <CardHeader
+        className={classes.cardHeader}
         title="Random Pokémon Generator"
         subheader="Comes with sprites, types and Pokedex entries!"
         action={
           <Button
-            variant="outlined"
+            variant="contained"
+            color="primary"
             onClick={getPokemon}
             style={{ marginTop: "1rem" }}
+            startIcon={<Shuffle />}
           >
             <Typography>Search random Pokémon</Typography>
           </Button>
         }
-        style={{
-          borderBottom: "solid 1px black",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "start",
-        }}
       />
-
-      {pokeID !== 0 && (
-        <Container>
-          <CardContent>
-            <Typography variant="body1">
-              You got #{pokeID}: {pokeName} !
-            </Typography>
-            <Typography>
-              {pokeName} is a <span> {pokeTypes} </span> type Pokémon.
-            </Typography>
-            <Container style={{margin: "1rem"}}>
-              <img src={pokeSprite} alt={`${pokeName}'s sprite.`} />
+      <Divider variant="middle"/>
+      {pokeID !== 0 ? (
+        <Container className={classes.cardContent}>
+          <CardContent className={classes.cardContent}>
+            <Container className={classes.cardContentContainer}>
+              <Typography variant="body1">
+                You got #{pokeID}: {pokeName} !
+              </Typography>
+              <Typography>
+                {pokeName} is a <span> {pokeTypes} </span> type Pokémon.
+              </Typography>
+              <Typography variant="body2">
+                <span>{pokeName}'s most recent Pokedex entry:</span> {pokedex}
+              </Typography>
             </Container>
-            <Typography variant="body2">
-              <span>{pokeName}'s most recent Pokedex entry:</span> {pokedex}
-            </Typography>
+            <Container className={classes.spriteContainer}>
+              <img style={{width: "12rem"}} src={pokeSprite} alt={`${pokeName}'s sprite.`} />
+            </Container>
           </CardContent>
+        </Container>
+      ) : (
+        <Container className={classes.cardNoContent}>
+          <Typography variant="body1">
+            You haven't found any Pokémon yet!
+          </Typography>
         </Container>
       )}
     </Card>
