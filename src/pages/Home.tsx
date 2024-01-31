@@ -38,8 +38,11 @@ const useStyles = makeStyles((theme) => {
       display: "flex",
       flexDirection: "column",
       alignItems: "start",
-      gap: "1rem"
+      gap: "1rem",
     },
+    interestList: {
+      padding: "0 1.5rem"
+    }
   };
 });
 
@@ -98,13 +101,13 @@ export default function Home() {
     <div className={classes.page}>
       <Grid container spacing={2}>
         <Grid item xs={12} md={6} direction="row">
-          <Grid container spacing={8}>
-            <Grid item xs={12} md={6}>
+          <Grid container spacing={4}>
+            <Grid item lg={6}>
               <Typography variant="h1">
                 About <span className={classes.fontHollowEffect}>me</span>
               </Typography>
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid item lg={6}>
               <Typography variant="body1">
                 I'm Matheus (Theus for short) - he/him - a 19-year-old beginner
                 Web Developer who's always been passionate about technology,
@@ -129,35 +132,32 @@ export default function Home() {
         <Grid item xs={12} md={6}>
           <Card variant="outlined">
             <CardHeader
-            className={classes.cardHeader}
+              className={classes.cardHeader}
               title="Interests"
               subheader="Likes, Dislikes, Hobbies and Favorite Media"
               action={
-                <IconButton
-                  color="primary"
-                  onClick={handleExpandClick}
-                >
-                  {!expanded ? <ArrowCircleDown /> : <ArrowCircleUp/>}
+                <IconButton color="primary" onClick={handleExpandClick}>
+                  {!expanded ? <ArrowCircleDown /> : <ArrowCircleUp />}
                 </IconButton>
               }
             />
-              <Collapse in={expanded} timeout="auto" unmountOnExit>
-                {interests.map((thing) => (
-                  <List key={thing.title}>
-                    <ListItem divider>
-                      <ListItemText
-                        primary={thing.title}
-                        primaryTypographyProps={{ variant: "h6" }}
-                      />
+            <Collapse in={expanded} timeout="auto" unmountOnExit>
+              {interests.map((thing) => (
+                <List key={thing.title} className={classes.interestList}>
+                  <ListItem divider>
+                    <ListItemText
+                      primary={thing.title}
+                      primaryTypographyProps={{ variant: "h6" }}
+                    />
+                  </ListItem>
+                  {thing.content.map((item) => (
+                    <ListItem>
+                      <ListItemText>{item}</ListItemText>
                     </ListItem>
-                    {thing.content.map((item) => (
-                      <ListItem>
-                        <ListItemText>{item}</ListItemText>
-                      </ListItem>
-                    ))}
-                  </List>
-                ))}
-              </Collapse>
+                  ))}
+                </List>
+              ))}
+            </Collapse>
           </Card>
         </Grid>
         <Grid item xs={12} md={6}>
