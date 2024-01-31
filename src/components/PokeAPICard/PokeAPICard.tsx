@@ -4,6 +4,7 @@ import {
   CardContent,
   CardHeader,
   Container,
+  Divider,
   Typography,
   makeStyles,
 } from "@material-ui/core";
@@ -16,6 +17,7 @@ const useStyles = makeStyles((theme) => {
     card: {
       display: "flex",
       flexDirection: "column",
+      width: "100%",
     },
     cardHeader: {
       display: "flex",
@@ -89,7 +91,7 @@ export const PokeAPICard = () => {
           </Button>
         }
       />
-
+      <Divider variant="middle"/>
       {pokeID !== 0 ? (
         <Container className={classes.cardContent}>
           <CardContent className={classes.cardContent}>
