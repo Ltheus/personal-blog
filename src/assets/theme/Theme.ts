@@ -1,6 +1,6 @@
 import { createTheme } from "@material-ui/core";
 export const drawerWidth = 180
-export const cardHeight = "82rem"
+export const cardHeight = "73rem"
 
 export const GlobalTheme = createTheme({
   typography: {
