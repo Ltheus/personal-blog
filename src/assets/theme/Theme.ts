@@ -7,24 +7,18 @@ export const GlobalTheme = createTheme({
     fontWeightBold: 700,
     fontSize: 18,
     h1: {
-      fontFamily: "Pixelify Sans",
       fontSize: "6rem",
       fontWeight: 700,
-      // borderBottom: "solid 3px #0a010c",
-      marginBottom: "2rem",
-      lineHeight: 0.9,
     },
     h5: {
-      fontFamily: "Pixelify Sans",
       fontSize: "2rem",
       fontWeight: 700,
-      lineHeight: 1.2,
+      fontStyle: "italic",
     },
     h6: {
-      fontFamily: "Pixelify Sans",
       fontSize: "2rem",
       fontWeight: 400,
-      lineHeight: 0.9,
+      fontStyle: "italic",
     },
     body1: {
       lineHeight: 1,
@@ -39,7 +33,7 @@ export const GlobalTheme = createTheme({
     },
     text: {
       primary: "#0c0311",
-      secondary: "#a229e6 ",
+      secondary: "#a229e6",
     },
     background: {
       default: "#ebebed",
