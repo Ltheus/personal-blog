@@ -23,10 +23,10 @@ export const GlobalTheme = createTheme({
       fontStyle: "italic",
     },
     body1: {
-      lineHeight: 1,
+      lineHeight: 1.1,
     },
     body2: {
-      lineHeight: 1
+      lineHeight: 1.1
     }
   },
   palette: {
