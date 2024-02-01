@@ -15,7 +15,7 @@ export const work = [
     name: "Cinépolis",
     title: "Intern (aug - nov, 2022)",
     description:
-      "In the second semester of 2022, I worked as an intern in the HR department at Cinépolis. It was enjoyable, especially because I could go to the movies EVERY day without paying anything. However, it wasn't what I wanted, among other reasons, so I ended up leaving and decided to start college.",
+      "In the second semester of 2022, I worked in the HR department at Cinépolis. It was fun, mainly because I could go to the movies without paying anything. However, it wasn't what I wanted, among other reasons, so I ended up leaving and decided to start college.",
     image: `${cinepolisLogo}`,
   },
   {
@@ -28,7 +28,7 @@ export const work = [
   {
     name: "Other knowledges",
     title: "Languages, programming and other abilities.",
-    description: `I have advanced English skills and knowledge in Python3, HTML5, CSS3, JavaScript, TypeScript, ReactJS, and a basic understanding of NextJS and quickly learn new things. Also pretty good at math!`,
+    description: `I have advanced English skills and knowledge in Python3, HTML5, CSS3, JavaScript, TypeScript, ReactJS, and quickly learn new things. Also pretty good at math!`,
     image: `${languagesLogos}`,
   },
 ];

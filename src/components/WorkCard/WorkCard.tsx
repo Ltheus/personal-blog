@@ -58,7 +58,7 @@ export const WorkCard = () => {
           </Grid>
           <Grid item xs={6}>
             <CardMedia>
-              <ImageList rowHeight={250} cols={12}>
+              <ImageList rowHeight={200} cols={12}>
                 <ImageListItem cols={12}>
                   <img src={item.image} alt="A picture of me" />
                 </ImageListItem>
