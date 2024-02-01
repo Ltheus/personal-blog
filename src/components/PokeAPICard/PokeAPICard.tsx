@@ -4,71 +4,20 @@ import {
   CardContent,
   CardHeader,
   Container,
-  Divider,
   Typography,
-  makeStyles,
 } from "@material-ui/core";
 import { useState } from "react";
 import { FETCH_POKEMON_DATA } from "./PokeAPIFunctions";
 import { Shuffle } from "@mui/icons-material";
-import { drawerWidth } from "../../assets/theme/Theme";
+import { usePokeCardStyles } from "./PokeAPICard";
 
-const useStyles = makeStyles(() => {
-  return {
-    card: {
-      display: "flex",
-      flexDirection: "column",
-      width: drawerWidth,
-    },
-    cardHeader: {
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "start",
-      width: drawerWidth,
-      padding: "0 .5rem",
-      margin: 0
-    },
-    button: {
-      margin: "1rem",
-      marginBottom: 0
-    },
-    cardContent: {
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "space-between",
-      alignItems: "center",
-      padding: ".5rem 0",
-      width: drawerWidth,
-    },
-    cardContentContainer: {
-      flexGrow: 1,
-      padding: "0 1rem",
-    },
-    cardNoContent: {
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      marginTop: "2rem",
-      padding: "0 1rem",
-      width: drawerWidth,
-    },
-    spriteContainer: {
-      padding: 0,
-      display: "flex",
-      justifyContent: "center",
-    },
-    sprite: {
-      width: (drawerWidth - 40),
-    },
-  };
-});
 
 export const PokeAPICard = () => {
   const [pokeName, setPokeName] = useState("");
   const [pokeID, setPokeID] = useState(0);
   const [pokeSprite, setPokeSprite] = useState("");
 
-  const classes = useStyles();
+  const classes = usePokeCardStyles();
 
   const getPokemon = async () => {
     const pokeID = Math.floor(Math.random() * 1009);
