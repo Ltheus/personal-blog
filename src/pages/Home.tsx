@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => {
       justifyContent: "center",
     },
     fontGradientEffect: {
-      background: `linear-gradient(90deg, ${theme.palette.text.primary}, ${theme.palette.text.secondary})`,
+      background: `linear-gradient(120deg, ${theme.palette.text.primary}, ${theme.palette.text.secondary})`,
       backgroundClip: "text",
       WebkitBackgroundClip: "text",
       WebkitTextFillColor: "transparent",
