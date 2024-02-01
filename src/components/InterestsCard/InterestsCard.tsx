@@ -5,30 +5,14 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
-  makeStyles,
 } from "@material-ui/core";
-import { cardHeight } from "../../assets/theme/Theme";
-import { interests } from "./InterestList";
 
-const useStyles = makeStyles(() => {
-  return {
-    card: {
-      height: cardHeight,
-    },
-    cardHeader: {
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "start",
-      gap: "1rem",
-    },
-    interestList: {
-      padding: "0 1.5rem 1rem",
-    },
-  };
-});
+import { interests } from "./InterestList";
+import { useInterestStyles } from "./InterestsCardStyles";
+
 
 export const InterestsCard = () => {
-  const classes = useStyles();
+  const classes = useInterestStyles();
 
   return (
     <Card variant="outlined" square className={classes?.card}>

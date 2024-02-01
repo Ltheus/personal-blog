@@ -6,51 +6,15 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
-  makeStyles,
 } from "@material-ui/core";
 import { Instagram, GitHub, LinkedIn } from "@material-ui/icons";
 import picture from "../../assets/images/avatar_picture.jpg";
 import { PokeAPICard } from "../PokeAPICard/PokeAPICard";
-import { drawerWidth } from "../../assets/theme/Theme";
+import { useLayoutStyles } from "./LayoutStyles";
 
-const useStyles = makeStyles((theme) => {
-  return {
-    root: {
-      display: "flex",
-      height: "100%",
-    },
-    drawer: {
-      width: drawerWidth,
-      height: "100%",
-    },
-    drawerPaper: {
-      width: drawerWidth,
-      overflowX: "hidden",
-      display: "flex",
-      flexDirection: "column",
-      gap: "1rem",
-    },
-    avatarContainer: {
-      width: drawerWidth,
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      padding: "1rem 0",
-    },
-    avatar: {
-      width: "5rem",
-      height: "5rem",
-      border: `solid 1px ${theme?.palette?.primary?.main}`,
-    },
-    contactTitle: {
-      margin: "0 1rem",
-      padding: 0,
-    },
-  };
-});
 
 export const Layout = ({ children }: any) => {
-  const classes = useStyles();
+  const classes = useLayoutStyles();
   const contactItems = [
     {
       text: "Instagram",
