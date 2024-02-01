@@ -3,16 +3,17 @@ import {
   CardHeader,
   List,
   ListItem,
+  ListItemIcon,
   ListItemText,
   makeStyles,
 } from "@material-ui/core";
-import { interests } from "./InterestList";
 import { cardHeight } from "../../assets/theme/Theme";
+import { interests } from "./InterestList";
 
 const useStyles = makeStyles(() => {
   return {
     card: {
-      height: cardHeight
+      height: cardHeight,
     },
     cardHeader: {
       display: "flex",
@@ -35,10 +36,12 @@ export const InterestsCard = () => {
         className={classes.cardHeader}
         title="Interests"
         subheader="Likes, Dislikes, Hobbies and Favorite Media"
+        subheaderTypographyProps={{variant:"body2"}}
       />
       {interests.map((thing) => (
         <List key={thing.title} className={classes.interestList}>
           <ListItem>
+            <ListItemIcon>{thing.icon}</ListItemIcon>
             <ListItemText
               primary={thing.title}
               primaryTypographyProps={{ variant: "h5" }}
@@ -46,7 +49,10 @@ export const InterestsCard = () => {
           </ListItem>
           {thing.content.map((item) => (
             <ListItem>
-              <ListItemText>{item}</ListItemText>
+              <ListItemText
+                secondary={item}
+                secondaryTypographyProps={{ variant: "body2" }}
+              />
             </ListItem>
           ))}
         </List>

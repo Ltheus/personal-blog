@@ -43,6 +43,7 @@ export const WorkCard = () => {
         className={classes.cardHeader}
         title="Work and other knowledges"
         subheader="Graduation, past experiences, and other abilities"
+        subheaderTypographyProps={{ variant: "body2" }}
       />
       {work.map((item) => (
         <Card square elevation={0} key={item.name} className={classes.workCard}>
@@ -51,9 +52,10 @@ export const WorkCard = () => {
               className={classes.cardHeader}
               title={item.name}
               subheader={item.title}
+              subheaderTypographyProps={{ variant: "body2" }}
             />
             <CardContent>
-              <Typography variant="body1" gutterBottom>
+              <Typography variant="body2" gutterBottom>
                 {item.description}
               </Typography>
             </CardContent>
