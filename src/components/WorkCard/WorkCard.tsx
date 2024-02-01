@@ -38,25 +38,25 @@ export const WorkCard = () => {
   const classes = useStyles();
 
   return (
-    <Paper variant="outlined" className={classes.workList} square>
+    <Paper variant="outlined" className={classes?.workList} square>
       <CardHeader
-        className={classes.cardHeader}
+        className={classes?.cardHeader}
         title="Work and other knowledges"
         subheader="Graduation, past experiences, and other abilities"
         subheaderTypographyProps={{ variant: "body2" }}
       />
       {work.map((item) => (
-        <Card square elevation={0} key={item.name} className={classes.workCard}>
+        <Card square elevation={0} key={item?.name} className={classes?.workCard}>
           <Grid item xs={6}>
             <CardHeader
-              className={classes.cardHeader}
-              title={item.name}
-              subheader={item.title}
+              className={classes?.cardHeader}
+              title={item?.name}
+              subheader={item?.title}
               subheaderTypographyProps={{ variant: "body2" }}
             />
             <CardContent>
               <Typography variant="body2" gutterBottom>
-                {item.description}
+                {item?.description}
               </Typography>
             </CardContent>
           </Grid>
@@ -64,7 +64,7 @@ export const WorkCard = () => {
             <CardMedia>
               <ImageList rowHeight={200} cols={12}>
                 <ImageListItem cols={12}>
-                  <img src={item.image} alt="A picture of me" />
+                  <img src={item?.image} alt="A picture of me" />
                 </ImageListItem>
               </ImageList>
             </CardMedia>

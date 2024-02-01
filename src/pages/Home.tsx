@@ -1,5 +1,4 @@
 import {
-  CardMedia,
   Grid,
   ImageList,
   ImageListItem,
@@ -14,7 +13,7 @@ import personalPicture from "../assets/images/me_skyone.jpg";
 const useStyles = makeStyles((theme) => {
   return {
     page: {
-      color: theme.palette.text.primary,
+      color: theme?.palette?.text?.primary,
       margin: "1rem 4rem",
       overflowY: "visible",
     },
@@ -24,7 +23,7 @@ const useStyles = makeStyles((theme) => {
       justifyContent: "center",
     },
     fontGradientEffect: {
-      background: `linear-gradient(120deg, ${theme.palette.text.primary}, ${theme.palette.text.secondary})`,
+      background: `linear-gradient(120deg, ${theme?.palette?.text?.primary}, ${theme?.palette?.text?.secondary})`,
       backgroundClip: "text",
       WebkitBackgroundClip: "text",
       WebkitTextFillColor: "transparent",
@@ -47,15 +46,15 @@ export default function Home() {
   const classes = useStyles();
 
   return (
-    <div className={classes.page}>
+    <div className={classes?.page}>
       <Grid container spacing={2}>
         <Grid item xs={12}>
-          <Paper square variant="outlined" className={classes.titleContainer}>
+          <Paper square variant="outlined" className={classes?.titleContainer}>
             <Grid item xs={6}>
               <Typography variant="h1">
-                <span className={classes.fontGradientEffect}>About me</span>
+                <span className={classes?.fontGradientEffect}>About me</span>
               </Typography>
-              <Typography variant="body2" className={classes.infoText}>
+              <Typography variant="body2" className={classes?.infoText}>
                 I'm Matheus (Theus for short) - he/him - a 19-year-old beginner
                 Web Developer who's always been passionate about technology,
                 arts, crafting, and video games. When I was younger, my dad was

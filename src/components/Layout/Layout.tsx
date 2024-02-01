@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => {
     avatar: {
       width: "5rem",
       height: "5rem",
-      border: `solid 1px ${theme.palette.primary.main}`,
+      border: `solid 1px ${theme?.palette?.primary?.main}`,
     },
     contactTitle: {
       margin: "0 1rem",
@@ -70,19 +70,19 @@ export const Layout = ({ children }: any) => {
   ];
 
   return (
-    <div className={classes.root}>
+    <div className={classes?.root}>
       <Drawer
         variant="permanent"
         anchor="left"
-        className={classes.drawer}
-        classes={{ paper: classes.drawerPaper }}
+        className={classes?.drawer}
+        classes={{ paper: classes?.drawerPaper }}
       >
-        <Container className={classes.avatarContainer}>
-          <Avatar alt="" src={picture} className={classes.avatar} />
+        <Container className={classes?.avatarContainer}>
+          <Avatar alt="" src={picture} className={classes?.avatar} />
         </Container>
         <div>
           <List>
-            <ListItem component="p" className={classes.contactTitle} divider>
+            <ListItem component="p" className={classes?.contactTitle} divider>
               <ListItemText
                 primary="Socials"
                 primaryTypographyProps={{ variant: "h6" }}
@@ -92,12 +92,12 @@ export const Layout = ({ children }: any) => {
               <ListItem
                 button
                 component="a"
-                href={item.path}
+                href={item?.path}
                 target="_blank"
-                key={item.text}
+                key={item?.text}
               >
-                <ListItemIcon>{item.icon}</ListItemIcon>
-                <ListItemText secondary={item.text} />
+                <ListItemIcon>{item?.icon}</ListItemIcon>
+                <ListItemText secondary={item?.text} />
               </ListItem>
             ))}
           </List>

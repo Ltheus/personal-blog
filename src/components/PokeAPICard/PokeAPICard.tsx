@@ -13,7 +13,7 @@ import { FETCH_POKEMON_DATA } from "./PokeAPIFunctions";
 import { Shuffle } from "@mui/icons-material";
 import { drawerWidth } from "../../assets/theme/Theme";
 
-const useStyles = makeStyles((theme) => {
+const useStyles = makeStyles(() => {
   return {
     card: {
       display: "flex",
@@ -76,14 +76,14 @@ export const PokeAPICard = () => {
   };
 
   return (
-    <Card className={classes.card} square elevation={0}>
+    <Card className={classes?.card} square elevation={0}>
       <CardHeader
-        className={classes.cardHeader}
+        className={classes?.cardHeader}
         title="Random Pokémon Generator"
         titleTypographyProps={{variant: "body1", }}
       />
       <Button
-        className={classes.button}
+        className={classes?.button}
         variant="contained"
         color="secondary"
         onClick={getPokemon}
@@ -93,16 +93,16 @@ export const PokeAPICard = () => {
         <Typography >Find a Pokémon!</Typography>
       </Button>
       {pokeID !== 0 ? (
-        <Container className={classes.cardContent}>
-          <CardContent className={classes.cardContent}>
-            <Container className={classes.cardContentContainer}>
+        <Container className={classes?.cardContent}>
+          <CardContent className={classes?.cardContent}>
+            <Container className={classes?.cardContentContainer}>
               <Typography variant="body2">
                 #{pokeID}: {pokeName}
               </Typography>
             </Container>
-            <Container className={classes.spriteContainer}>
+            <Container className={classes?.spriteContainer}>
               <img
-                className={classes.sprite}
+                className={classes?.sprite}
                 src={pokeSprite}
                 alt={`${pokeName}'s sprite.`}
               />
@@ -110,7 +110,7 @@ export const PokeAPICard = () => {
           </CardContent>
         </Container>
       ) : (
-        <Container className={classes.cardNoContent}>
+        <Container className={classes?.cardNoContent}>
           <Typography variant="body2">
             You haven't found any Pokémon yet!
           </Typography>
