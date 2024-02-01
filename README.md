@@ -6,7 +6,6 @@ This project is more of a website, a simple Personal Blog, showing information a
 ## Technologies used
    - TypeScript;
    - ReactJS;
-   - React Router;
    - Axios;
    - Material-UI (v4);
 
