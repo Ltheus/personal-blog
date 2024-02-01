@@ -9,8 +9,8 @@ import {
 } from "@material-ui/core";
 import { Instagram, GitHub, LinkedIn } from "@material-ui/icons";
 import picture from "../../assets/images/avatar_picture.jpg";
-import { PokeAPICard } from "../PokeAPICard/PokeAPICard";
 import { useLayoutStyles } from "./LayoutStyles";
+import { PokeAPICard } from "../PokeAPICard/PokeAPICard";
 
 
 export const Layout = ({ children }: any) => {

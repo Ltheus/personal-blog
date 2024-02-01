@@ -9,7 +9,7 @@ import {
 import { useState } from "react";
 import { FETCH_POKEMON_DATA } from "./PokeAPIFunctions";
 import { Shuffle } from "@mui/icons-material";
-import { usePokeCardStyles } from "./PokeAPICard";
+import { usePokeCardStyles } from "./PokeAPICardStyles";
 
 
 export const PokeAPICard = () => {
