@@ -11,17 +11,19 @@ import {
   makeStyles,
 } from "@material-ui/core";
 import { work } from "./WorkList";
+import { cardHeight } from "../../assets/theme/Theme";
 
 const useStyles = makeStyles(() => {
   return {
+    workList: {
+      padding: "0 .8rem",
+      height: cardHeight,
+    },
     cardHeader: {
       display: "flex",
       flexDirection: "column",
       alignItems: "start",
       gap: "1rem",
-    },
-    workList: {
-      padding: "0 .8rem",
     },
     workCard: {
       margin: ".25rem 0",

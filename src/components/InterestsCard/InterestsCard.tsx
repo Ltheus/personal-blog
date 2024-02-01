@@ -7,9 +7,13 @@ import {
   makeStyles,
 } from "@material-ui/core";
 import { interests } from "./InterestList";
+import { cardHeight } from "../../assets/theme/Theme";
 
-const useStyles = makeStyles((theme) => {
+const useStyles = makeStyles(() => {
   return {
+    card: {
+      height: cardHeight
+    },
     cardHeader: {
       display: "flex",
       flexDirection: "column",
@@ -26,7 +30,7 @@ export const InterestsCard = () => {
   const classes = useStyles();
 
   return (
-    <Card variant="outlined" square>
+    <Card variant="outlined" square className={classes.card}>
       <CardHeader
         className={classes.cardHeader}
         title="Interests"
