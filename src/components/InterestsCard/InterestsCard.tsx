@@ -42,7 +42,7 @@ export const InterestsCard = () => {
           </ListItem>
           {thing.content.map((item) => (
             <ListItem>
-              <ListItemText inset>{item}</ListItemText>
+              <ListItemText>{item}</ListItemText>
             </ListItem>
           ))}
         </List>
