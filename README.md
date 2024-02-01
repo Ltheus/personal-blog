@@ -12,10 +12,10 @@ This project is more of a website, a simple Personal Blog, showing information a
 
 ## Functionalities
 The website has two main functionalities:
- -  The homepage, where the viewer can read information and facts about the developer and;
- - The API page, where the viewer can click the "Search for random Pokémon" button and find information about a random Pokémon among the thousand existing ones.
+ - The homepage, where the viewer can read information and facts about the developer and;
+ - The PokéAPI Card, inside the left-side drawer, where the user can click "Find Pokémon" to get a random Pokémon, with it's name and Pokedex number.
 
-<sup>\* In case you want to find more about any Pokémon, check out [this page](https://https://pokemondb.net/).</sup>
+<sup>\* In case you want to find more about any Pokémon, check out the [Pokémon DataBase](https://https://pokemondb.net/).</sup>
 
 ## Installation and execution
 To install the application, follow this simple 3-step guide:
@@ -43,7 +43,6 @@ To install the application, follow this simple 3-step guide:
  
  <sup>\* In case you don't have NodeJS installed, click [here](https://nodejs.org/en/download/current) and install the LTS release.</sup>
  
- <sup>\** In case you don't have npm installed, click [here](https://www.npmjs.com/package/npm) and follow the steps to install it.
-</sup>
+ <sup>\** In case you don't have npm installed, click [here](https://www.npmjs.com/package/npm) and follow the steps to install it.</sup>
 
-<sup>\*** You may have to add `--force` on the end of the third command due to the releases of the libraries this project makes use of.</sup>
+<sup>\*** If the installation doesn't work, add `--force` to the end of the third command. This is due to the releases of the libraries used on this project.</sup>
