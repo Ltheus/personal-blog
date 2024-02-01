@@ -1,37 +1,48 @@
 import { createTheme } from "@material-ui/core";
+export const drawerWidth = 180
 
 export const GlobalTheme = createTheme({
   typography: {
-    fontFamily: "Raleway",
+    fontFamily: "Armata",
     fontWeightRegular: 400,
     fontWeightBold: 700,
-    fontSize: 18,
+    fontSize: 14,
     h1: {
-      fontSize: "6rem",
       fontWeight: 700,
-      borderBottom: "solid 3px #0a010c",
-      marginBottom: "2rem",
-      lineHeight: 0.9,
+      fontSize: "3rem"
+    },
+    h5: {
+      fontSize: "1.5rem",
+      fontWeight: 700,
+      fontStyle: "italic",
+    },
+    h6: {
+      fontSize: "1.2rem",
+      fontWeight: 400,
+      fontStyle: "italic",
     },
     body1: {
       lineHeight: 1,
     },
+    body2: {
+      lineHeight: 1
+    }
   },
   palette: {
     primary: {
-      main: "#3f084b",
+      main: "#a229e6",
     },
     secondary: {
-      main: "#d97086",
+      main: "#eaea4c",
     },
     text: {
-      primary: "#0a010c",
-      secondary: "#d94070"
+      primary: "#0c0311",
+      secondary: "#a229e6",
     },
     background: {
-      default: "#f4edf9",
-      paper: "#e8cfff",
+      default: "#ebebed",
+      paper: "#ebebfd",
     },
-    divider: "#0a010c70",
+    divider: "#a229e6",
   },
 });

@@ -8,25 +8,16 @@ import {
   ListItemText,
   makeStyles,
 } from "@material-ui/core";
-import {
-  Person,
-  Instagram,
-  GitHub,
-  LinkedIn,
-  Settings,
-} from "@material-ui/icons";
-import { useHistory } from "react-router-dom";
+import { Instagram, GitHub, LinkedIn } from "@material-ui/icons";
 import picture from "../../assets/images/avatar_picture.jpg";
+import { PokeAPICard } from "../PokeAPICard/PokeAPICard";
+import { drawerWidth } from "../../assets/theme/Theme";
 
-const drawerWidth = 240;
 const useStyles = makeStyles((theme) => {
   return {
     root: {
       display: "flex",
       height: "100%",
-    },
-    page: {
-      padding: "1rem",
     },
     drawer: {
       width: drawerWidth,
@@ -34,12 +25,10 @@ const useStyles = makeStyles((theme) => {
     },
     drawerPaper: {
       width: drawerWidth,
-      height: "100%",
       overflowX: "hidden",
-
       display: "flex",
       flexDirection: "column",
-      justifyContent: "space-between",
+      gap: "1rem",
     },
     avatarContainer: {
       width: drawerWidth,
@@ -51,7 +40,7 @@ const useStyles = makeStyles((theme) => {
     avatar: {
       width: "5rem",
       height: "5rem",
-      filter: `drop-shadow(2px 2px 2px ${theme.palette.text.primary})`,
+      border: `solid 1px ${theme.palette.primary.main}`,
     },
     contactTitle: {
       margin: "0 1rem",
@@ -62,35 +51,20 @@ const useStyles = makeStyles((theme) => {
 
 export const Layout = ({ children }: any) => {
   const classes = useStyles();
-  const history = useHistory();
-
-  const menuItems = [
-    {
-      text: "About me",
-      icon: <Person color="primary" />,
-      path: "/",
-    },
-    {
-      text: "API",
-      icon: <Settings color="primary"/>,
-      path: "/api",
-    },
-  ];
-
   const contactItems = [
     {
       text: "Instagram",
-      icon: <Instagram />,
+      icon: <Instagram color="primary" fontSize="small" />,
       path: "https://www.instagram.com/gltheus?igsh=MXUwd2QzMDNlajY0eA==",
     },
     {
       text: "GitHub",
-      icon: <GitHub />,
+      icon: <GitHub color="primary" fontSize="small" />,
       path: "https://github.com/Ltheus",
     },
     {
       text: "LinkedIn",
-      icon: <LinkedIn />,
+      icon: <LinkedIn color="primary" fontSize="small" />,
       path: "https://www.linkedin.com/in/matheus-lopes-74b172265",
     },
   ];
@@ -103,32 +77,15 @@ export const Layout = ({ children }: any) => {
         className={classes.drawer}
         classes={{ paper: classes.drawerPaper }}
       >
-        <div>
-          <Container className={classes.avatarContainer}>
-            <Avatar alt="" src={picture} className={classes.avatar} />
-          </Container>
-          <List>
-            {menuItems.map((item) => (
-              <ListItem
-                button
-                divider
-                key={item.text}
-                onClick={() => {
-                  history.push(item.path);
-                }}
-              >
-                <ListItemIcon>{item.icon}</ListItemIcon>
-                <ListItemText primary={item.text} />
-              </ListItem>
-            ))}
-          </List>
-        </div>
+        <Container className={classes.avatarContainer}>
+          <Avatar alt="" src={picture} className={classes.avatar} />
+        </Container>
         <div>
           <List>
-            <ListItem component="p" className={classes.contactTitle}>
+            <ListItem component="p" className={classes.contactTitle} divider>
               <ListItemText
-                primary="Contact"
-                primaryTypographyProps={{ variant: "h5" }}
+                primary="Socials"
+                primaryTypographyProps={{ variant: "h6" }}
               />
             </ListItem>
             {contactItems.map((item) => (
@@ -137,17 +94,17 @@ export const Layout = ({ children }: any) => {
                 component="a"
                 href={item.path}
                 target="_blank"
-                divider={item.text !== "LinkedIn" && true}
                 key={item.text}
               >
                 <ListItemIcon>{item.icon}</ListItemIcon>
-                <ListItemText primary={item.text} />
+                <ListItemText secondary={item.text} />
               </ListItem>
             ))}
           </List>
         </div>
+        <PokeAPICard />
       </Drawer>
-      <div className={classes.page}>{children}</div>
+      <div>{children}</div>
     </div>
   );
 };
