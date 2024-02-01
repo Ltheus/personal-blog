@@ -1,28 +1,32 @@
 import { createTheme } from "@material-ui/core";
+export const drawerWidth = 180
 
 export const GlobalTheme = createTheme({
   typography: {
     fontFamily: "Armata",
     fontWeightRegular: 400,
     fontWeightBold: 700,
-    fontSize: 18,
+    fontSize: 14,
     h1: {
-      fontSize: "6rem",
       fontWeight: 700,
+      fontSize: "3rem"
     },
     h5: {
-      fontSize: "2rem",
+      fontSize: "1.5rem",
       fontWeight: 700,
       fontStyle: "italic",
     },
     h6: {
-      fontSize: "2rem",
+      fontSize: "1.2rem",
       fontWeight: 400,
       fontStyle: "italic",
     },
     body1: {
       lineHeight: 1,
     },
+    body2: {
+      lineHeight: 1
+    }
   },
   palette: {
     primary: {

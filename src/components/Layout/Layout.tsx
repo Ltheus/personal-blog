@@ -11,16 +11,13 @@ import {
 import { Instagram, GitHub, LinkedIn } from "@material-ui/icons";
 import picture from "../../assets/images/avatar_picture.jpg";
 import { PokeAPICard } from "../PokeAPICard/PokeAPICard";
+import { drawerWidth } from "../../assets/theme/Theme";
 
-const drawerWidth = 210;
 const useStyles = makeStyles((theme) => {
   return {
     root: {
       display: "flex",
       height: "100%",
-    },
-    page: {
-      padding: "1rem",
     },
     drawer: {
       width: drawerWidth,
@@ -28,7 +25,6 @@ const useStyles = makeStyles((theme) => {
     },
     drawerPaper: {
       width: drawerWidth,
-      height: "100%",
       overflowX: "hidden",
       display: "flex",
       flexDirection: "column",
@@ -108,7 +104,7 @@ export const Layout = ({ children }: any) => {
         </div>
         <PokeAPICard />
       </Drawer>
-      <div className={classes.page}>{children}</div>
+      <div>{children}</div>
     </div>
   );
 };

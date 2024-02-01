@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import "./index.css";
-import { ThemeProvider, createTheme } from "@material-ui/core";
+import { ThemeProvider } from "@material-ui/core";
 import { Layout } from "./components/Layout/Layout";
 import { BrowserRouter } from "react-router-dom";
 import { GlobalTheme } from "./assets/theme/Theme";
