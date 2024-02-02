@@ -3,14 +3,14 @@ import cinepolisLogo from "../../assets/images/cinepolis.png"
 import skyoneLogo from "../../assets/images/skyone.jpg"
 import languagesLogos from "../../assets/images/programming.jpg"
 
-interface work {
+interface workProps {
   name: string,
   title: string,
   description: string,
   image: string
 }
 
-export const work : work[] = [
+export const work : workProps[] = [
   {
     name: "FIAP",
     title: "Graduation (2023 - 2024)",
