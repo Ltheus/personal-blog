@@ -4,7 +4,7 @@ export const useStyles = makeStyles((theme) => {
   return {
     page: {
       color: theme?.palette?.text?.primary,
-      margin: "1rem 4rem",
+      margin: "16px 64px",
       overflowY: "visible",
     },
     personalImageContainer: {
@@ -19,14 +19,14 @@ export const useStyles = makeStyles((theme) => {
       WebkitTextFillColor: "transparent",
     },
     titleContainer: {
-      padding: "1rem 1rem",
+      padding: "16px",
       display: "flex",
       justifyContent: "center",
-      gap: "1.5rem",
+      gap: "24px",
     },
     infoText: {
       padding: 0,
-      paddingBottom: "1rem",
+      paddingBottom: "16px",
       margin: 0,
     },
   };

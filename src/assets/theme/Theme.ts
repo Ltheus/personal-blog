@@ -1,7 +1,7 @@
 import { createTheme } from "@material-ui/core";
 
 export const drawerWidth = 180
-export const cardHeight = "73rem"
+export const cardHeight = 1170
 
 export const GlobalTheme = createTheme({
   typography: {
@@ -11,15 +11,15 @@ export const GlobalTheme = createTheme({
     fontSize: 14,
     h1: {
       fontWeight: 700,
-      fontSize: "3rem"
+      fontSize: "48px"
     },
     h5: {
-      fontSize: "1.5rem",
+      fontSize: "24px",
       fontWeight: 700,
       fontStyle: "italic",
     },
     h6: {
-      fontSize: "1.2rem",
+      fontSize: "19px",
       fontWeight: 400,
       fontStyle: "italic",
     },

@@ -23,15 +23,15 @@ export const useLayoutStyles = makeStyles((theme) => {
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      padding: "1rem 0",
+      padding: "16px 0",
     },
     avatar: {
-      width: "5rem",
-      height: "5rem",
+      width: "80px",
+      height: "80px",
       border: `solid 1px ${theme?.palette?.primary?.main}`,
     },
     contactTitle: {
-      margin: "0 1rem",
+      margin: "0 16px",
       padding: 0,
     },
   };

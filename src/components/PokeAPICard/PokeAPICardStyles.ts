@@ -14,11 +14,11 @@ const usePokeCardStyles = makeStyles(() => {
       flexDirection: "column",
       alignItems: "start",
       width: drawerWidth,
-      padding: "0 .5rem",
+      padding: "0 8px",
       margin: 0,
     },
     button: {
-      margin: "1rem",
+      margin: "16px",
       marginBottom: 0,
     },
     cardContent: {
@@ -26,19 +26,19 @@ const usePokeCardStyles = makeStyles(() => {
       flexDirection: "column",
       justifyContent: "space-between",
       alignItems: "center",
-      padding: ".5rem 0",
+      padding: "8px 0",
       width: drawerWidth,
     },
     cardContentContainer: {
       flexGrow: 1,
-      padding: "0 1rem",
+      padding: "0 16px",
     },
     cardNoContent: {
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      marginTop: "2rem",
-      padding: "0 1rem",
+      marginTop: "32px",
+      padding: "0 16px",
       width: drawerWidth,
     },
     spriteContainer: {

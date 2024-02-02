@@ -13,7 +13,7 @@ export const useInterestStyles = makeStyles(() => {
       gap: "1rem",
     },
     interestList: {
-      padding: "0 1.5rem 1rem",
+      padding: "0 24px 16px",
     },
   };
 });
