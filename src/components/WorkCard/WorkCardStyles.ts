@@ -11,7 +11,7 @@ export const useWorkStyles = makeStyles(() => {
       display: "flex",
       flexDirection: "column",
       alignItems: "start",
-      gap: "16px",
+      gap: 16,
     },
     workCard: {
       margin: "4px 0",

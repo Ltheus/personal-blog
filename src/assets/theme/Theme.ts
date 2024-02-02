@@ -11,15 +11,15 @@ export const GlobalTheme = createTheme({
     fontSize: 14,
     h1: {
       fontWeight: 700,
-      fontSize: "48px"
+      fontSize: 48
     },
     h5: {
-      fontSize: "24px",
+      fontSize: 24,
       fontWeight: 700,
       fontStyle: "italic",
     },
     h6: {
-      fontSize: "19px",
+      fontSize: 19,
       fontWeight: 400,
       fontStyle: "italic",
     },

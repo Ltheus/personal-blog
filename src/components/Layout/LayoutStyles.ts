@@ -26,8 +26,8 @@ export const useLayoutStyles = makeStyles((theme) => {
       padding: "16px 0",
     },
     avatar: {
-      width: "80px",
-      height: "80px",
+      width: 80,
+      height: 80,
       border: `solid 1px ${theme?.palette?.primary?.main}`,
     },
     contactTitle: {

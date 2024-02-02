@@ -19,14 +19,14 @@ export const useStyles = makeStyles((theme) => {
       WebkitTextFillColor: "transparent",
     },
     titleContainer: {
-      padding: "16px",
+      padding: 16,
       display: "flex",
       justifyContent: "center",
-      gap: "24px",
+      gap: 24,
     },
     infoText: {
       padding: 0,
-      paddingBottom: "16px",
+      paddingBottom: 16,
       margin: 0,
     },
   };

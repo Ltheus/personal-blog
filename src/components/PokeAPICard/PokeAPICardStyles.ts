@@ -18,7 +18,7 @@ const usePokeCardStyles = makeStyles(() => {
       margin: 0,
     },
     button: {
-      margin: "16px",
+      margin: 16,
       marginBottom: 0,
     },
     cardContent: {
@@ -37,7 +37,7 @@ const usePokeCardStyles = makeStyles(() => {
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      marginTop: "32px",
+      marginTop: 32,
       padding: "0 16px",
       width: drawerWidth,
     },
