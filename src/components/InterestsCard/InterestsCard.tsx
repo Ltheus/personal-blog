@@ -22,16 +22,16 @@ export const InterestsCard = () => {
         subheader="Likes, Dislikes, Hobbies and Favorite Media"
         subheaderTypographyProps={{variant:"body2"}}
       />
-      {interests.map((thing) => (
-        <List key={thing?.title} className={classes.interestList}>
+      {interests.map((item) => (
+        <List key={item?.title} className={classes.interestList}>
           <ListItem>
-            <ListItemIcon>{thing?.icon}</ListItemIcon>
+            <ListItemIcon>{item?.icon}</ListItemIcon>
             <ListItemText
-              primary={thing?.title}
+              primary={item?.title}
               primaryTypographyProps={{ variant: "h5" }}
             />
           </ListItem>
-          {thing?.content?.map((item) => (
+          {item?.content?.map((item) => (
             <ListItem>
               <ListItemText
                 secondary={item}
