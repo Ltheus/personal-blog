@@ -28,7 +28,7 @@ export default function Home() {
                 arts, crafting, and video games. When I was younger, my dad was
                 a car mechanic, and my older brother was an electronic engineer.
                 With that, I always had the presence of this kind of
-                prefessionals in my life, which is why I chose the job I do.
+                professionals in my life, which is why I chose the job I do.
               </Typography>
             </Grid>
             <Grid item xs={6}>

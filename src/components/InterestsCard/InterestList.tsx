@@ -44,7 +44,7 @@ export const interests: interests[] = [
     ],
   },
   {
-    title: "Favourite Media",
+    title: "Favorite Media",
     icon: <StarIcon color="primary" fontSize="small" />,
     content: [
       "Pokémon Games",
