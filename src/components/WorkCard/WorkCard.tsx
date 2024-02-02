@@ -18,18 +18,18 @@ export const WorkCard = () => {
   const classes = useWorkStyles();
 
   return (
-    <Paper variant="outlined" className={classes?.workList} square>
+    <Paper variant="outlined" className={classes.workList} square>
       <CardHeader
-        className={classes?.cardHeader}
+        className={classes.cardHeader}
         title="Work and other knowledge"
         subheader="Graduation, past experiences, and other abilities"
         subheaderTypographyProps={{ variant: "body2" }}
       />
       {work.map((item) => (
-        <Card square elevation={0} key={item?.name} className={classes?.workCard}>
+        <Card square elevation={0} key={item?.name} className={classes.workCard}>
           <Grid item xs={6}>
             <CardHeader
-              className={classes?.cardHeader}
+              className={classes.cardHeader}
               title={item?.name}
               subheader={item?.title}
               subheaderTypographyProps={{ variant: "body2" }}

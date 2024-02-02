@@ -15,15 +15,15 @@ export const InterestsCard = () => {
   const classes = useInterestStyles();
 
   return (
-    <Card variant="outlined" square className={classes?.card}>
+    <Card variant="outlined" square className={classes.card}>
       <CardHeader
-        className={classes?.cardHeader}
+        className={classes.cardHeader}
         title="Interests"
         subheader="Likes, Dislikes, Hobbies and Favorite Media"
         subheaderTypographyProps={{variant:"body2"}}
       />
       {interests.map((thing) => (
-        <List key={thing?.title} className={classes?.interestList}>
+        <List key={thing?.title} className={classes.interestList}>
           <ListItem>
             <ListItemIcon>{thing?.icon}</ListItemIcon>
             <ListItemText
