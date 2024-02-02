@@ -34,7 +34,7 @@ export default function Home() {
             <Grid item xs={6}>
               <ImageList cols={1} rowHeight={200}>
                 <ImageListItem cols={1}>
-                  <img src={personalPicture} alt="A picture of me" />
+                  <img src={personalPicture} alt="Matheus" />
                 </ImageListItem>
               </ImageList>
             </Grid>

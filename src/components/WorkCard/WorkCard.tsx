@@ -44,7 +44,7 @@ export const WorkCard = () => {
             <CardMedia>
               <ImageList rowHeight={200} cols={12}>
                 <ImageListItem cols={12}>
-                  <img src={item?.image} alt="A picture of me" />
+                  <img src={item?.image} alt={item?.name} />
                 </ImageListItem>
               </ImageList>
             </CardMedia>

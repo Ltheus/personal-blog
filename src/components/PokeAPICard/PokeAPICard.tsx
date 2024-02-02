@@ -53,7 +53,7 @@ export const PokeAPICard = () => {
               <img
                 className={classes?.sprite}
                 src={pokeSprite}
-                alt={`${pokeName}'s sprite.`}
+                alt={`${pokeName}.`}
               />
             </Container>
           </CardContent>

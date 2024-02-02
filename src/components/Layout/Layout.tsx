@@ -42,7 +42,7 @@ export const Layout = ({ children }: any) => {
         classes={{ paper: classes?.drawerPaper }}
       >
         <Container className={classes?.avatarContainer}>
-          <Avatar alt="" src={picture} className={classes?.avatar} />
+          <Avatar alt="Matheus" src={picture} className={classes?.avatar} />
         </Container>
         <div>
           <List>
