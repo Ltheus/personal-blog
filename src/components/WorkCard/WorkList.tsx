@@ -33,7 +33,7 @@ export const work : work[] = [
     image: `${skyoneLogo}`,
   },
   {
-    name: "Other knowledges",
+    name: "Other knowledge",
     title: "Languages, programming and other abilities.",
     description: `I have advanced English skills and knowledge in Python3, HTML5, CSS3, JavaScript, TypeScript, ReactJS, and quickly learn new things. Also pretty good at math!`,
     image: `${languagesLogos}`,

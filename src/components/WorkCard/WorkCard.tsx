@@ -21,7 +21,7 @@ export const WorkCard = () => {
     <Paper variant="outlined" className={classes?.workList} square>
       <CardHeader
         className={classes?.cardHeader}
-        title="Work and other knowledges"
+        title="Work and other knowledge"
         subheader="Graduation, past experiences, and other abilities"
         subheaderTypographyProps={{ variant: "body2" }}
       />
