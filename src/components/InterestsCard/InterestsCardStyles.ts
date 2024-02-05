@@ -10,10 +10,10 @@ export const useInterestStyles = makeStyles(() => {
       display: "flex",
       flexDirection: "column",
       alignItems: "start",
-      gap: "1rem",
+      gap: 16,
     },
     interestList: {
-      padding: "0 1.5rem 1rem",
+      padding: "0 24px 16px",
     },
   };
 });

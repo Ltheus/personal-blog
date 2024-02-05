@@ -3,13 +3,13 @@ import ThumbDownIcon from "@material-ui/icons/ThumbDown";
 import GamepadIcon from "@material-ui/icons/Gamepad";
 import StarIcon from "@material-ui/icons/Star";
 
-interface interests {
+interface interestsProps {
   title: string;
   icon: any;
   content: string[];
 }
 
-export const interests: interests[] = [
+export const interests: interestsProps[] = [
   {
     title: "Likes",
     icon: <ThumbUpIcon color="primary" fontSize="small" />,
@@ -44,7 +44,7 @@ export const interests: interests[] = [
     ],
   },
   {
-    title: "Favourite Media",
+    title: "Favorite Media",
     icon: <StarIcon color="primary" fontSize="small" />,
     content: [
       "Pokémon Games",

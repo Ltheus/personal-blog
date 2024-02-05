@@ -4,17 +4,17 @@ import { cardHeight } from "../../assets/theme/Theme";
 export const useWorkStyles = makeStyles(() => {
   return {
     workList: {
-      padding: "0 .8rem",
+      padding: "0 13px",
       height: cardHeight,
     },
     cardHeader: {
       display: "flex",
       flexDirection: "column",
       alignItems: "start",
-      gap: "1rem",
+      gap: 16,
     },
     workCard: {
-      margin: ".25rem 0",
+      margin: "4px 0",
       display: "flex",
       justifyContent: "center",
       alignItems: "center",

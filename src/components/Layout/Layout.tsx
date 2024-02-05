@@ -34,19 +34,19 @@ export const Layout = ({ children }: any) => {
   ];
 
   return (
-    <div className={classes?.root}>
+    <div className={classes.root}>
       <Drawer
         variant="permanent"
         anchor="left"
-        className={classes?.drawer}
-        classes={{ paper: classes?.drawerPaper }}
+        className={classes.drawer}
+        classes={{ paper: classes.drawerPaper }}
       >
-        <Container className={classes?.avatarContainer}>
-          <Avatar alt="" src={picture} className={classes?.avatar} />
+        <Container className={classes.avatarContainer}>
+          <Avatar alt="Matheus" src={picture} className={classes.avatar} />
         </Container>
         <div>
           <List>
-            <ListItem component="p" className={classes?.contactTitle} divider>
+            <ListItem component="p" className={classes.contactTitle} divider>
               <ListItemText
                 primary="Socials"
                 primaryTypographyProps={{ variant: "h6" }}

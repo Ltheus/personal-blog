@@ -3,14 +3,14 @@ import cinepolisLogo from "../../assets/images/cinepolis.png"
 import skyoneLogo from "../../assets/images/skyone.jpg"
 import languagesLogos from "../../assets/images/programming.jpg"
 
-interface work {
+interface workProps {
   name: string,
   title: string,
   description: string,
   image: string
 }
 
-export const work : work[] = [
+export const work : workProps[] = [
   {
     name: "FIAP",
     title: "Graduation (2023 - 2024)",
@@ -33,7 +33,7 @@ export const work : work[] = [
     image: `${skyoneLogo}`,
   },
   {
-    name: "Other knowledges",
+    name: "Other knowledge",
     title: "Languages, programming and other abilities.",
     description: `I have advanced English skills and knowledge in Python3, HTML5, CSS3, JavaScript, TypeScript, ReactJS, and quickly learn new things. Also pretty good at math!`,
     image: `${languagesLogos}`,
